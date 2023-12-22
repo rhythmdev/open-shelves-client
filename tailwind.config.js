@@ -6,6 +6,15 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
+    fontFamily: {
+     'lobster': "'Lobster Two', sans-serif",
+     'poppins': "'Poppins', sans-serif"
+    },
+    colors: {
+      "gra-start": '#FEBF10',
+      "gra-middle": '#74CCCF',
+      'gra-end': '#EF4823'
+    },
     extend: {},
   },
   plugins: [
