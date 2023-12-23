@@ -44,7 +44,7 @@ const Header = () => {
                             isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start via-gra-middle to-gra-end  bg-clip-text text-transparent underline font-bold" : ""
                         }
                     >
-                        Add Books
+                        Add Book
                     </NavLink>
                     <NavLink
                         to="/allBooks"
