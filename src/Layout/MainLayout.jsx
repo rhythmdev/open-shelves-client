@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Components/Header/Header";
+import Foooter from "../Components/Foooter/Foooter";
+
 
 
 const MainLayout = () => {
@@ -11,6 +13,7 @@ const MainLayout = () => {
                     <Outlet />
                 </div>
             </div>
+          <Foooter/>
         </div>
 
     );
