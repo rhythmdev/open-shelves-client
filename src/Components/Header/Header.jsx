@@ -8,8 +8,8 @@ const Header = () => {
             <Navbar fluid rounded>
                 <Link to={'/'}>
                     <Navbar.Brand  >
-                        <img src={logo} className="mr-2 h-6 sm:h-9" alt="Flowbite React Logo" />
-                        <span className=" font-lobster self-center whitespace-nowrap text-3xl font-bold dark:text-white bg-gradient-to-r from-gra-start via-gra-middle to-gra-end bg-clip-text text-transparent">Open Shelves</span>
+                        <img src={logo} className="mr-2 h-6 sm:h-9" alt="Logo" />
+                        <span className=" font-lobster self-center whitespace-nowrap text-3xl font-bold dark:text-white bg-gradient-to-r from-gra-start via-gra-middle  to-gra-end bg-clip-text text-transparent">Open Shelves</span>
                     </Navbar.Brand>
                 </Link>
 
