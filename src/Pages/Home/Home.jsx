@@ -1,8 +1,14 @@
+import BooksCategory from "../../Components/BooksCategory/BooksCategory";
 
 const Home = () => {
     return (
         <div>
-            <h2 className="text-2xl font-bold text-center text-gray-600">Home</h2>
+          {/* banner area start */}
+          {/* end of banner area */}
+
+          {/* books category area */}
+          <BooksCategory/>
+          {/* end of books category area */}
         </div>
     );
 };
