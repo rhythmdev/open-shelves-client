@@ -4,13 +4,13 @@ import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../hooks/useAuth";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
-import { Toast } from "flowbite-react";
-import { HiCheck } from 'react-icons/hi';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const { createUser, googleSignIn, logOut } = useAuth();
+    const [displayPassword, setDisplayPassword] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                Swal.fire(`Welcome ${user?.displayName} to EliteAutos`)
+                Swal.fire(`Welcome ${user?.displayName} to Open Shelves`)
                 // navigate after login
                 navigate(location?.state ? location.state : '/');
             })
@@ -70,14 +70,22 @@ const Register = () => {
                     photoURL: photoURL,
                 });
                 logOut();
-                // Swal.fire('Sign Up Successfully!')
-                <Toast>
-                    <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-500 dark:bg-green-800 dark:text-green-200">
-                        <HiCheck className="h-5 w-5" />
-                    </div>
-                    <div className="ml-3 text-sm font-normal">Successfully Registered!</div>
-                    <Toast.Toggle />
-                </Toast>
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Sign Up Successfully"
+                });
+
                 navigate('/logIn')
             })
             .catch((error) => {
@@ -116,7 +124,18 @@ const Register = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="password" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                                    <div className="relative">
+                                        <input type={displayPassword ? "text" : "password"} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+
+                                        <span
+                                            onClick={() => setDisplayPassword(!displayPassword)}
+                                            className="cursor-pointer absolute top-[35%] right-2
+    "
+                                        >
+                                            {displayPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                                        </span>
+                                    </div>
+
                                 </div>
 
 

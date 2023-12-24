@@ -2,9 +2,13 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
+
 const Login = () => {
 
     const { logIn, googleSignIn } = useAuth();
+    const [displayPassword, setDisplayPassword] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -14,7 +18,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                Swal.fire(`Welcome ${user?.displayName} to EliteAutos`)
+                Swal.fire(`Welcome ${user?.displayName} to Open Shelves`)
                 // navigate after login
                 navigate(location?.state ? location.state : '/');
             })
@@ -40,7 +44,22 @@ const Login = () => {
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user);
-                Swal.fire(`Welcome ${user?.displayName} to EliteAutos`);
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Sign In Successfully"
+                });
+
                 // navigate after login
                 navigate(location?.state ? location.state : '/');
             })
@@ -67,7 +86,7 @@ const Login = () => {
                                 Please Log In!
                             </h1>
                             <form onSubmit={handelLogIn} className="space-y-4 md:space-y-6" >
-                                
+
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Your Email</label>
                                     <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="barry@gmail.com" required />
@@ -75,7 +94,17 @@ const Login = () => {
 
                                 <div>
                                     <label htmlFor="password" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                                    <div className="relative">
+                                        <input type={displayPassword ? "text" : "password"} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                                        <span
+                                            onClick={() => setDisplayPassword(!displayPassword)}
+                                            className="cursor-pointer absolute top-[35%] right-2
+    "
+                                        >
+                                            {displayPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                                        </span>
+                                    </div>
+
                                 </div>
 
                                 <div className="flex items-center justify-center">
