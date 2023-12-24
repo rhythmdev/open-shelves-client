@@ -69,7 +69,7 @@ const Register = () => {
                 });
                 logOut();
                 Swal.fire('Sign Up Successfully!')
-                // navigate('/logIn')
+                 navigate('/logIn')
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -92,14 +92,14 @@ const Register = () => {
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-800 md:text-2xl dark:text-white">
                                 Create and account
                             </h1>
-                            <form onSubmit={handelSignUp} className="space-y-4 md:space-y-6" action="#">
+                            <form onSubmit={handelSignUp} className="space-y-4 md:space-y-6" >
                                 <div>
                                     <label htmlFor="name" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Your Name</label>
-                                    <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ryan Dahl" required />
+                                    <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Barry Alan" required />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Your Email</label>
-                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ryandahl@gmail.com" required />
+                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="barry@gmail.com" required />
                                 </div>
                                 <div>
                                     <label htmlFor="photUrl" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Your Photo Url</label>
