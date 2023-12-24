@@ -1,8 +1,37 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import logo from '../../assets/logo.png'
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import avatar from './avatar.jpg'
 
 const Header = () => {
+    const { user, logOut } = useAuth();
+
+    const handelSignOut = () => {
+        logOut()
+            .then(() => {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Log Out Successfully"
+                });
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
     return (
         <div>
             <Navbar fluid rounded>
@@ -13,19 +42,43 @@ const Header = () => {
                     </Navbar.Brand>
                 </Link>
 
-                <div className="flex md:order-2">
+                <div className="flex md:order-2 ">
+
+
                     <Dropdown
                         arrowIcon={false}
                         inline
                         label={
-                            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+                            user ? (
+                                <Avatar alt="User pic" img={user?.photoURL} rounded />
+                            )
+                                :
+                                (<Avatar alt="User pic" img={avatar} rounded />)
                         }
                     >
                         <Dropdown.Header>
-                            <span className="block text-sm">Bonnie Green</span>
-                            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+                            <span className="block text-base text-center">{
+                                user ? (user?.displayName)
+                                    :
+                                    ('Open Shelves')
+                            }</span>
+                            <span className="block truncate text-sm font-medium">{
+                                user ? (user?.email)
+                                    :
+                                    ('openshelves@hotmail.com')
+                            }</span>
                         </Dropdown.Header>
+                        <Dropdown.Divider />
+                        {
+                            user ? (<Dropdown.Item onClick={handelSignOut} className="font-semibold text-base justify-center">Log out</Dropdown.Item>)
+                                :
+                                (
+                                    <Link to={'/login'} >
+                                        <Dropdown.Item className="font-semibold text-base justify-center">Log In</Dropdown.Item>
+                                    </Link>
+                                )
 
+                        }
                     </Dropdown>
                     <Navbar.Toggle />
                 </div>
