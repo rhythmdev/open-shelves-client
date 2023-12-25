@@ -8,8 +8,14 @@ import BorrowedBooks from "../Pages/BorrowedBooks/BorrowedBooks";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Books from "../Components/BooksCategory/Books";
+
+
+
+
 
 const router = createBrowserRouter([
+   
     {
         path: '/',
         element: <MainLayout />,
@@ -31,6 +37,11 @@ const router = createBrowserRouter([
                 path: '/borrowedBooks',
                 element: <PrivateRoute><BorrowedBooks /></PrivateRoute>
             },
+            {
+                path: '/books/:category',
+                element: <Books/>,
+                loader: ({params}) => fetch(`http://localhost:8080/api/books/${params.category}`)
+            }, 
             {
                 path: '/login',
                 element: <Login />
