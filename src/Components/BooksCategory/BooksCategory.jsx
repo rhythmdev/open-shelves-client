@@ -9,7 +9,7 @@ const BooksCategory = () => {
     const apiUrl = useApiUrl();
 
      useEffect(() => {
-        apiUrl.get('/booksCategory')
+        apiUrl.get('/api/booksCategory')
         .then(response => {
           setBookCategories(response.data);  
         })

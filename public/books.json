@@ -1,0 +1,218 @@
+[
+  {
+    "book_name": "The Guest List",
+    "book_image": "https://i.ibb.co/5K6KPmR/Mystery-Thrillers-One.jpg",
+    "book_quantity": 10,
+    "author_name": "Lucy Foley",
+    "rating": 4.5,
+    "category": "Mystery & Thrillers",
+    "description": "On a remote island off the coast of Ireland, a wedding celebration takes a dark turn when guests begin to disappear and die under mysterious circumstances. As secrets are revealed and tensions rise, it becomes clear that no one is who they seem and anyone could be the killer. This atmospheric thriller keeps you guessing until the shocking final twist."
+  },
+  {
+    "book_name": "Verity",
+    "book_image": "https://i.ibb.co/Kq1wFcv/Mystery-Thrillers-Two.jpg",
+    "book_quantity": 8,
+    "author_name": "Colleen Hoover",
+    "rating": 4.3,
+    "category": "Mystery & Thrillers",
+    "description": "Low on funds and desperate for work, struggling writer Lowen Ashleigh accepts a seemingly simple job: finishing the autobiography of bestselling author Verity Crawford. But as Lowen delves into Verity's chilling manuscript, she uncovers a shocking secret that throws her into a world of danger and obsession. Is Verity's story true? And what lengths will she go to to protect it? This psychological thriller explores the dark side of creativity and the dangers of hidden truths."
+  },
+  {
+    "book_name": "The Silent Patient",
+    "book_image": "https://i.ibb.co/n6GWCch/Mystery-Thrillers-Three.jpg",
+    "book_quantity": 15,
+    "author_name": "Alex Michaelides",
+    "rating": 4.1,
+    "category": "Mystery & Thrillers",
+    "description": "Alicia Berenson, a seemingly perfect wife, has been mute for six years after a violent incident in her home. Locked away in a secure psychiatric facility, she refuses to speak, leaving her motives and the truth about what happened shrouded in mystery. Theo Faber, a forensic psychotherapist, becomes fixated on Alicia's case and determined to unlock her secrets. But as Theo gets closer to the truth, he begins to realize that Alicia may not be as innocent as she seems and that someone is willing to go to any lengths to keep her silent. This gripping psychological thriller keeps you on the edge of your seat until the final, jaw-dropping reveal.."
+  },
+  {
+    "book_name": "The Girl on the Train",
+    "book_image": "https://i.ibb.co/x81ypWm/Mystery-Thrillers-Four.jpg",
+    "book_quantity": 5,
+    "author_name": "Paula Hawkins",
+    "rating": 4.0,
+    "category": "Mystery & Thrillers",
+    "description": "Rachel Watson, a voyeuristic train commuter, witnesses something shocking from her daily journey. Obsessed with the seemingly perfect couple whose lives she glimpses from afar, Rachel becomes entangled in their dark secrets and ultimately puts herself in danger. This addictive page-turner explores themes of voyeurism, memory, and the dangers of judging people from afar."
+  },
+  {
+    "book_name": "Then She Was Gone",
+    "book_image": "https://i.ibb.co/NrG8DmR/Mystery-Thrillers-Five.webp",
+    "book_quantity": 7,
+    "author_name": "Lisa Jewell",
+    "rating": 3.9,
+    "category": "Mystery & Thrillers",
+    "description": "Ten years ago, Laurel's teenage daughter went missing without a trace. Despite never giving up hope, Laurel's life has been shattered by her loss. But when new evidence emerges, she is forced to confront the possibility that someone she knows may be involved in her daughter's disappearance. This fast-paced and suspenseful thriller explores the devastating impact of loss and the power of secrets."
+  },
+  {
+    "book_name": "The Woman in the Window",
+    "book_image": "https://i.ibb.co/Xp2hX04/Mystery-Thrillers-Six.jpg",
+    "book_quantity": 3,
+    "author_name": "A.J. Finn",
+    "rating": 3.8,
+    "category": "Mystery & Thrillers",
+    "description": "Suffering from agoraphobia, Anna Fox spends her days watching her neighbors from her window. When she witnesses a chilling act involving the family across the street, Anna is torn between staying silent and risking her own safety to speak out. This twisty and suspenseful thriller explores the themes of isolation, paranoia, and the unreliable nature of perception."
+  },
+  {
+    "book_name": "Pride and Prejudice",
+    "book_image": "https://i.ibb.co/NZwr6PY/Novel-One.webp",
+    "book_quantity": 10,
+    "author_name": "Jane Austen",
+    "rating": 4.7,
+    "category": "Novel",
+    "description": "In the charming English countryside, the Bennet sisters, Elizabeth, Jane, Mary, Kitty, and Lydia, face the social expectations and challenges of finding suitable husbands in their class-conscious society. Elizabeth, the spirited and intelligent second eldest, clashes with the arrogant and wealthy Mr. Darcy, but their initial animosity gradually melts away as they develop a deeper understanding and appreciation for each other. This witty and timeless classic explores themes of love, pride, prejudice, social class, and self-discovery, making it a beloved tale for generations of readers."
+  },
+  {
+    "book_name": "To Kill a Mockingbird",
+    "book_image": "https://i.ibb.co/2tmBqB0/Novel-Two.webp",
+    "book_quantity": 12,
+    "author_name": "Harper Lee",
+    "rating": 4.8,
+    "category": "Novel",
+    "description": "Set in the racially charged American South of the 1930s, this coming-of-age story follows Scout Finch, a young girl growing up in the fictional town of Maycomb, Alabama. Through Scout's innocent eyes, we witness the trial of Tom Robinson, a black man falsely accused of assaulting a white woman. Scout's father, Atticus Finch, a lawyer and moral compass, defends Tom with unwavering integrity, despite facing prejudice and threats from the community. This Pulitzer Prize-winning novel explores themes of racial injustice, childhood innocence, and the moral courage to stand up for what is right."
+  },
+  {
+    "book_name": "The Great Gatsby",
+    "book_image": "https://i.ibb.co/rysX6YP/Novel-Three.jpg",
+    "book_quantity": 15,
+    "author_name": "F. Scott Fitzgerald",
+    "rating": 4.4,
+    "category": "Novel",
+    "description": "The Roaring Twenties come alive in this tragic love story set against the backdrop of extravagant parties and hidden desires. Nick Carraway, a young Midwesterner, is drawn into the opulent world of his wealthy neighbor, Jay Gatsby. Gatsby, shrouded in mystery and fueled by an obsessive love for Nick's beautiful cousin Daisy Buchanan, throws lavish parties in hopes of rekindling their long-lost romance. However, the American Dream becomes corrupted by Gatsby's yearning for the past and the moral decay of the upper class, leading to a tragic ending that reflects the disillusionment of the Jazz Age."
+  },
+  {
+    "book_name": "The Lord of the Rings",
+    "book_image": "https://i.ibb.co/VWLM5Kt/Novel-Four.jpg",
+    "book_quantity": 18,
+    "author_name": "J.R.R. Tolkien",
+    "rating": 4.5,
+    "category": "Novel",
+    "description": "In a world of elves, dwarves, hobbits, and wizards, the fate of Middle-earth hangs in the balance. Frodo Baggins, a unassuming hobbit, is entrusted with the perilous quest to destroy the One Ring, an artifact of immense power coveted by the Dark Lord Sauron. Joined by a fellowship of nine companions, Frodo embarks on a journey filled with danger, sacrifice, and epic battles against the forces of darkness. This sprawling epic fantasy trilogy explores themes of good versus evil, courage, friendship, and the power of hope in the face of overwhelming odds."
+  },
+  {
+    "book_name": "One Hundred Years of Solitude",
+    "book_image": "https://i.ibb.co/CKQCVB3/Novei-Five.jpg",
+    "book_quantity": 7,
+    "author_name": "Gabriel García Márquez",
+    "rating": 4.6,
+    "category": "Novel",
+    "description": "This magical realist masterpiece chronicles the rise and fall of the Buendía family in the fictional town of Macondo, Colombia. Over seven generations, we witness love, loss, births, deaths, and fantastical events that blur the lines between reality and imagination. The novel explores themes of isolation, cyclical patterns of history, the search for identity, and the enduring power of love and family ties within the context of a vibrant and unforgettable Latin American world."
+  },
+  {
+    "book_name": "The Hitchhiker's Guide to the Galaxy",
+    "book_image": "https://i.ibb.co/vVFBRJv/Novel-Six.webp",
+    "book_quantity": 6,
+    "author_name": "Douglas Adams",
+    "rating": 4.3,
+    "category": "Novel",
+    "description": "Arthur Dent, an Englishman with a penchant for tea and towels, finds himself unexpectedly hurtling through space after the Earth is demolished to make way for a hyperspace bypass. He teams up with his two-headed friend Ford Prefect, a research assistant for the titular Hitchhiker's Guide to the Galaxy, and embarks on a series of hilarious and absurd adventures across the galaxy. This science fiction comedy satirizes everything from bureaucracy to philosophy, leaving readers with a laugh-out-loud journey through the infinite universe."
+  },
+  {
+    "book_name": "The Handmaid's Tale",
+    "book_image": "https://i.ibb.co/SQnfdS0/Speculative-Fiction-One.jpg",
+    "book_quantity": 8,
+    "author_name": "Margaret Atwood",
+    "rating": 4.6,
+    "category": "Speculative Fiction",
+    "description": "In a grim future where environmental pollution has rendered most women infertile, Offred is forced into the brutal regime of Gilead. Stripped of her name and identity, she becomes a Handmaid, a fertile woman tasked with bearing children for the ruling elite. This chilling and dystopian novel explores themes of oppression, gender inequality, and the fight for freedom in a world where basic human rights are constantly under threat. Offred's powerful narrative delves into the psychological impact of control and the desperate hope that lingers even in the darkest of situations."
+  },
+  {
+    "book_name": "Station Eleven",
+    "book_image": "https://i.ibb.co/1TyJ0Q3/Speculative-Fiction-Two.jpg",
+    "book_quantity": 10,
+    "author_name": "Emily St. John Mandel",
+    "rating": 4.4,
+    "category": "Speculative Fiction",
+    "description": "Twenty years after a devastating flu pandemic decimates the world, a ragtag troupe of actors known as the Travelling Symphony wanders across a post-apocalyptic America. They carry with them remnants of art, music, and stories, connecting scattered communities and preserving what remains of human culture. This deeply moving novel explores the power of art and storytelling in the face of unimaginable loss. It delves into themes of grief, resilience, and the enduring strength of human connection amidst the ruins of civilization."
+  },
+  {
+    "book_name": "Never Let Me Go",
+    "book_image": "https://i.ibb.co/w6GNWsx/Speculative-Fiction-Three.jpg",
+    "book_quantity": 7,
+    "author_name": "Kazuo Ishiguro",
+    "rating": 4.5,
+    "category": "Speculative Fiction",
+    "description": "Kathy Hill and her classmates live a seemingly idyllic life at Hailsham, a secluded boarding school. However, whispers and cryptic remarks hint at a darker purpose for their existence. Gradually, Kathy and her friends learn the truth: they are clones, created solely for the purpose of organ donation. This heartbreaking and thought-provoking novel explores themes of mortality, love, and the ethics of scientific advancements. It raises profound questions about what it means to be human and the value of a life lived under the shadow of predetermined destiny."
+  },
+  {
+    "book_name": "The Martian",
+    "book_image": "https://i.ibb.co/6NBz2qT/Speculative-Fiction-Four.jpg",
+    "book_quantity": 12,
+    "author_name": "Andy Weir",
+    "rating": 4.3,
+    "category": "Speculative Fiction",
+    "description": "Astronaut Mark Watney wakes up alone on Mars, stranded after a fierce storm separates him from his crew. Presumed dead, he faces a seemingly insurmountable challenge: surviving on a hostile planet with limited supplies and dwindling hope. This thrilling and suspenseful novel chronicles Watney's ingenious use of science and technology to overcome incredible odds. It explores themes of resourcefulness, resilience, and the unwavering power of human determination in the face of unimaginable adversity."
+  },
+  {
+    "book_name": "Jonathan Strange & Mr Norrell",
+    "book_image": "https://i.ibb.co/BLSL2rZ/Speculative-Fiction-Five.webp",
+    "book_quantity": 5,
+    "author_name": "Susanna Clarke",
+    "rating": 4.2,
+    "category": "Speculative Fiction",
+    "description": "In an alternate England where magic has been long forgotten, Mr Norrell, a reclusive scholar, unearths the secrets of the ancient art. He rises to become a powerful magician, but his ambitions clash with those of Jonathan Strange, a young adventurer with his own prodigious magical talents. This expansive and intricately woven historical fantasy novel explores themes of power, rivalry, and the nature of magic. It delves into the fascinating world of English folklore and mythology, creating a rich and immersive experience for readers who love detailed world-building and complex characters."
+  },
+  {
+    "book_name": "The Ocean at the End of the Lane",
+    "book_image": "https://i.ibb.co/sHJ9d9d/Speculative-Fiction-Six.jpg",
+    "book_quantity": 6,
+    "author_name": "Neil Gaiman",
+    "rating": 4.1,
+    "category": "Speculative Fiction",
+    "description": "Returning to his childhood home, a man is drawn back into a forgotten past involving a mysterious woman named Mrs. Hempstock and a sinister entity known as the Old One. This hauntingly beautiful and atmospheric novel explores themes of memory, childhood trauma, and the hidden realities that lie beneath the surface of everyday life. Gaiman's masterful storytelling blends elements of magical realism, fantasy, and suspense, creating a unique and unforgettable reading experience."
+  },
+  {
+    "book_name": "Watchmen",
+    "book_image": "https://i.ibb.co/4tFTbk3/Comics-One.jpg",
+    "book_quantity": 10,
+    "author_name": "Alan Moore and Dave Gibbons",
+    "rating": 4.8,
+    "category": "Comics",
+    "description": "In an alternate 1985 where masked vigilantes are a fading reality, a murder investigation plunges the remaining heroes into a complex web of conspiracy, betrayal, and moral dilemmas. Watchmen deconstructs the superhero genre, blurring the lines between good and evil, and exploring themes of power, responsibility, and the cost of maintaining order in a world on the brink of nuclear war. Expect a dark and gritty atmosphere, complex characters with questionable morals, and a shocking climax that will leave you questioning everything you thought you knew about superheroes."
+  },
+  {
+    "book_name": "The Sandman",
+    "book_image": "https://i.ibb.co/Nr3FSKd/Comics-Two.jpg",
+    "book_quantity": 12,
+    "author_name": "Neil Gaiman",
+    "rating": 4.7,
+    "category": "Comics",
+    "description": "Morpheus, the lord of dreams, has been imprisoned for decades. Upon his escape, he embarks on a journey to rebuild his realm, the Dreaming, and confront the forces that conspired against him. The Sandman delves into the world of myth and folklore, featuring a cast of timeless characters like Death, Desire, and Delirium. Expect fantastical adventures, philosophical musings on the nature of dreams and reality, and a captivating exploration of family, responsibility, and the power of stories."
+  },
+  {
+    "book_name": "Maus",
+    "book_image": "https://i.ibb.co/C9Lk2sB/Comics-Three.jpg",
+    "book_quantity": 8,
+    "author_name": "Art Spiegelman",
+    "rating": 4.6,
+    "category": "Comics",
+    "description": "A Holocaust survivor recounts his experiences through the eyes of his son, Art Spiegelman, in this groundbreaking graphic novel. Using animals as metaphors – Jews are depicted as mice, Nazis as cats – Maus tackles the horrors of the Holocaust with raw honesty and emotional depth. Expect a powerful and thought-provoking read that confronts uncomfortable truths about human nature and the enduring legacy of trauma."
+  },
+  {
+    "book_name": "Persepolis",
+    "book_image": "https://i.ibb.co/LRy22q9/Comics-Four.jpg",
+    "book_quantity": 15,
+    "author_name": "Marjane Satrapi",
+    "rating": 4.5,
+    "category": "Comics",
+    "description": "Marjane Satrapi's graphic memoir chronicles her childhood and adolescence in Iran during the tumultuous years of the 1970s and 80s, including the Iranian Revolution and the Iran-Iraq War. Through witty and poignant narration, Satrapi offers a unique perspective on life under a repressive regime, exploring themes of family, identity, and the struggle for freedom. Expect humor and heartbreak intertwined in a coming-of-age story that sheds light on a complex historical period."
+  },
+  {
+    "book_name": "Batman: The Dark Knight Returns",
+    "book_image": "https://i.ibb.co/NYkNvzC/Comics-Five.jpg",
+    "book_quantity": 9,
+    "author_name": "Frank Miller",
+    "rating": 4.4,
+    "category": "Comics",
+    "description": "An aging Bruce Wayne, disillusioned and haunted by past failures, dons the cowl again as a brutal new threat emerges in Gotham City. The Dark Knight Returns reinvents Batman for a mature audience, exploring themes of aging, vigilantism, and the nature of justice in a decaying society. Expect gritty action sequences, psychological depth, and a stark portrayal of a broken hero pushed to his limits."
+  },
+  {
+    "book_name": "Saga",
+    "book_image": "https://i.ibb.co/pdVDXLY/Comics-Six.jpg",
+    "book_quantity": 7,
+    "author_name": "Brian K. Vaughan and Fiona Staples",
+    "rating": 4.3,
+    "category": "Comics",
+    "description": "Alana and Marko, star-crossed lovers from warring alien races, find themselves on the run with their newborn daughter, Hazel. Saga is a sprawling space opera that blends science fiction, fantasy, and romance, with stunning artwork and a diverse cast of characters. Expect epic battles, intergalactic travel, and a heartwarming story about family, love, and finding hope amidst galactic conflict."
+  }
+]
