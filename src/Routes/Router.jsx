@@ -10,13 +10,14 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Books from "../Components/BooksCategory/Books";
 import BookDetails from "../Pages/BookDetails/BookDetails";
+import ReadBook from "../Pages/ReadBook/ReadBook";
 
 
 
 
 
 const router = createBrowserRouter([
-   
+
     {
         path: '/',
         element: <MainLayout />,
@@ -40,13 +41,18 @@ const router = createBrowserRouter([
             },
             {
                 path: '/books/:category',
-                element: <Books/>,
-                loader: ({params}) => fetch(`http://localhost:8080/api/books/${params.category}`)
-            }, 
+                element: <PrivateRoute><Books /></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:8080/api/books/${params.category}`)
+            },
             {
                 path: '/bookDetails/:id',
-                element: <BookDetails/>,
-                loader: ({params}) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+                element: <PrivateRoute> <BookDetails /></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+            },
+            {
+              path: '/readBook/:id',
+              element: <PrivateRoute><ReadBook/></PrivateRoute>,
+              loader: ({params}) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
             },
             {
                 path: '/login',
