@@ -1,9 +1,62 @@
+import {  Modal, TextInput } from "flowbite-react";
+import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import { format } from "date-fns";
+import useApiUrl from "../../hooks/useApiUrl";
 
 const BookDetails = () => {
+     const {user} = useAuth();
+    const loadSingleBook = useLoaderData();
+    const [singleBook, setSingleBook] = useState(loadSingleBook);
 
-    const details = useLoaderData();
-    const { _id, book_name, book_image, book_quantity, author_name, description, category } = details || {};
+    const { _id, book_name, book_image, book_quantity, author_name, description, category } = singleBook || {};
+    const [openModal, setOpenModal] = useState(false);
+
+    function onCloseModal() {
+        setOpenModal(false);
+
+    }
+
+    const apiUrl = useApiUrl();
+
+
+    const handelModalSubmit = e => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget)
+        const returnDate = form.get('date');
+        const name = user?.displayName;
+        const email = user?.email;
+
+        const borrowedBook = {
+            name,
+            email,
+            returnDate,
+            image : singleBook.book_image,
+            bookName : singleBook.book_name,
+            bookId : singleBook._id,
+            category : singleBook.category,
+            quantity : singleBook.book_quantity,
+            borrowedDate: format(new Date(), 'yyyy-MM-dd'),
+
+        }
+     console.log(borrowedBook);
+     apiUrl.post('/api/borrowBook', borrowedBook)
+        .then(res => {
+            console.log(res.data);
+            if(res.data.insertedId){
+                alert('Book borrowed successfully');
+                onCloseModal();
+            }
+            else{
+                alert('Already borrowed')
+            }
+        })
+        .catch(err => console.log(err))
+
+
+        onCloseModal()
+    }
 
 
     return (
@@ -27,11 +80,12 @@ const BookDetails = () => {
                 </div>
                 <div className="flex flex-wrap justify-between">
 
-                    <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3">
+                    <button onClick={() => setOpenModal(true)} className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3">
                         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                             Borrow
                         </span>
                     </button>
+
                     <Link to={`/readBook/${_id}`}>
                         <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3">
                             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -41,6 +95,34 @@ const BookDetails = () => {
                     </Link>
 
                 </div>
+                {/* modal area */}
+                <>
+
+                    <>
+
+                        <Modal show={openModal} size="lg" onClose={onCloseModal} popup>
+                            <Modal.Header className="mx-3">Borrow: {book_name}</Modal.Header>
+                            <Modal.Body>
+                                <div className="space-y-6">
+                                    <form onSubmit={handelModalSubmit}>
+                                        <label>Return Date</label>
+                                        <TextInput name="date" type="date" placeholder="Please pick a date" required />
+                                        <button type="submit" className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3">
+                                            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                                Submit
+                                            </span>
+                                        </button>
+                                    </form>
+
+                                </div>
+                            </Modal.Body>
+                        </Modal>
+                    </>
+
+
+                </>
+
+                {/* end of modal area */}
             </div>
         </div>
     );

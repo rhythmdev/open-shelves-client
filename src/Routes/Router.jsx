@@ -14,8 +14,6 @@ import ReadBook from "../Pages/ReadBook/ReadBook";
 
 
 
-
-
 const router = createBrowserRouter([
 
     {
@@ -61,7 +59,8 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register />
-            }
+            },
+           
         ]
     }
 ])
