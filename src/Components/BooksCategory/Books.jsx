@@ -1,6 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import library from '../../assets/images/library.jpg'
 import BookCard from "./BookCard";
+import useAuth from "../../hooks/useAuth";
+import loader from '../../assets/loader.json'
+import Lottie from "lottie-react";
 
 const Books = () => {
  
@@ -8,6 +11,8 @@ const Books = () => {
     console.log(books);
     const {category} = useParams();
     console.log(category);
+
+    const {loading} = useAuth();
 
 
     return (
@@ -20,11 +25,24 @@ const Books = () => {
             </div>
             {/* end of hero area */}
             {/* books area start */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-12">
+            {
+                loading ? (
+                    <div className='flex items-center justify-center  min-h-screen'>
+                        <div>
+                            <Lottie animationData={loader} loop={true} className="size-[25%] mx-auto" />
+                        </div>
+                    </div>
+                )
+                :
+                (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-12">
              {
                 books?.map(book => <BookCard key={book?._id} book={book}/>)
              }
             </div>
+                )
+            }
+            
             {/* end of books area */}
         </div>
     );
