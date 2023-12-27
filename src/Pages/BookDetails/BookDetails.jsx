@@ -1,12 +1,13 @@
-import {  Modal, TextInput } from "flowbite-react";
+import { Modal, TextInput } from "flowbite-react";
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { format } from "date-fns";
 import useApiUrl from "../../hooks/useApiUrl";
+import Swal from "sweetalert2";
 
 const BookDetails = () => {
-     const {user} = useAuth();
+    const { user } = useAuth();
     const loadSingleBook = useLoaderData();
     const [singleBook, setSingleBook] = useState(loadSingleBook);
 
@@ -32,30 +33,62 @@ const BookDetails = () => {
             name,
             email,
             returnDate,
-            image : singleBook.book_image,
-            bookName : singleBook.book_name,
-            bookId : singleBook._id,
-            category : singleBook.category,
-            quantity : singleBook.book_quantity,
+            image: singleBook.book_image,
+            bookName: singleBook.book_name,
+            bookId: singleBook._id,
+            category: singleBook.category,
+            book_quantity: parseInt(singleBook.book_quantity),
             borrowedDate: format(new Date(), 'yyyy-MM-dd'),
 
         }
-     console.log(borrowedBook);
-     apiUrl.post('/api/borrowBook', borrowedBook)
-        .then(res => {
-            console.log(res.data);
-            if(res.data.insertedId){
-                alert('Book borrowed successfully');
-                onCloseModal();
-            }
-            else{
-                alert('Already borrowed')
-            }
-        })
-        .catch(err => console.log(err))
+        console.log(borrowedBook);
+        apiUrl.post('/api/borrowBook', borrowedBook)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.insertedId) {
+                    apiUrl.patch(`/api/updateBookQuantity/${_id}`)
+                        .then(res => {
+                            console.log(res.data);
+                            if (res.data.result.modifiedCount) {
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: "top-end",
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.onmouseenter = Swal.stopTimer;
+                                        toast.onmouseleave = Swal.resumeTimer;
+                                    }
+                                });
+                                Toast.fire({
+                                    icon: "success",
+                                    title: "Book Borrowed Successfully"
+                                });
+                                onCloseModal();
+                                // update book
+                                setSingleBook(res.data.updatedBook)
+                            }
+
+                        }
+                        )
 
 
-        onCloseModal()
+                }
+                else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'You already borrowed this book',
+
+
+                    })
+                    onCloseModal();
+                }
+            })
+            .catch(err => console.log(err))
+
+
+        // onCloseModal()
     }
 
 
@@ -76,7 +109,7 @@ const BookDetails = () => {
                         <h4>Author: {author_name}</h4>
                         <h4>Available: {book_quantity}</h4>
                     </div>
-                    <p className="text-sm dark:text-gray-400 mt-4">{description.slice(0, 220) + "........"}</p>
+                    <p className="text-sm dark:text-gray-400 mt-4">{description}</p>
                 </div>
                 <div className="flex flex-wrap justify-between">
 
