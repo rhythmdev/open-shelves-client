@@ -13,7 +13,7 @@ const BorrowedBooks = () => {
     useEffect(() => {
         apiUrl.get(`/api/borrowedBook/${user?.email}`)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 setBorrowedBooks(res.data);
             })
             .catch(err => console.log(err))
@@ -36,7 +36,7 @@ const BorrowedBooks = () => {
 
                 apiUrl.delete(`/api/returnBook/${_id}`)
                     .then(res => {
-                        console.log(res.data);
+                        // console.log(res.data);
                         if (res.data.deletedCount) {
                             apiUrl.patch(`api/increaseBookQuantity/${bookId}`)
                                 .then(res => {
@@ -69,15 +69,16 @@ const BorrowedBooks = () => {
 
     return (
         <div className="py-8">
-           
+
             <div>
 
                 {borrowedBooks.length < 1 ? <h2 className="text-2xl font-bold 
                 
-                text-center text-gray-600">No Books Borrowed Available</h2>
+              text-gray-700 text-center">No Borrowed Books Available</h2>
                     :
                     (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+
                             {
                                 borrowedBooks?.map(book => <div key={book?._id} className="block rounded-lg p-4 shadow-md shadow-indigo-100 ">
                                     <img

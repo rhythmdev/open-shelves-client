@@ -11,11 +11,12 @@ import PrivateRoute from "./PrivateRoute";
 import Books from "../Components/BooksCategory/Books";
 import BookDetails from "../Pages/BookDetails/BookDetails";
 import ReadBook from "../Pages/ReadBook/ReadBook";
+import UpdateBook from "../Components/UpdateBook/UpdateBook";
 
 
 
 const router = createBrowserRouter([
-    
+
 
     {
         path: '/',
@@ -37,8 +38,8 @@ const router = createBrowserRouter([
             {
                 path: '/borrowedBooks',
                 element: <PrivateRoute><BorrowedBooks /></PrivateRoute>
-             
-             
+
+
             },
             {
                 path: '/books/:category',
@@ -51,9 +52,14 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
             },
             {
-              path: '/readBook/:id',
-              element: <PrivateRoute><ReadBook/></PrivateRoute>,
-              loader: ({params}) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+                path: '/readBook/:id',
+                element: <PrivateRoute><ReadBook /></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+            },
+            {
+                path: 'updateBook/:id',
+                element: <PrivateRoute><UpdateBook /></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
             },
             {
                 path: '/login',
@@ -63,7 +69,7 @@ const router = createBrowserRouter([
                 path: '/register',
                 element: <Register />
             },
-           
+
         ]
     }
 ])
