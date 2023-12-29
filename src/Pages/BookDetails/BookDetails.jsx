@@ -44,11 +44,11 @@ const BookDetails = () => {
         // console.log(borrowedBook);
         apiUrl.post('/api/borrowBook', borrowedBook)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.insertedId) {
                     apiUrl.patch(`/api/updateBookQuantity/${_id}`)
                         .then(res => {
-                            console.log(res.data);
+                            // console.log(res.data);
                             if (res.data.result.modifiedCount) {
                                 const Toast = Swal.mixin({
                                     toast: true,
