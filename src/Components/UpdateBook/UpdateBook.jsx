@@ -24,7 +24,7 @@ const UpdateBook = () => {
             category
         }
         console.log(updateBook);
-        apiUrl.put(`/api/updateBook/${_id}`, updateBook)
+        apiUrl.put(`/api/updateBook/${_id}`, updateBook, {withCredentials: true})
             .then(res => {
                 console.log('updated', res.data);
                 if (res.data.modifiedCount > 0) {

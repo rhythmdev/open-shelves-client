@@ -32,7 +32,7 @@ const AddBook = () => {
 
 
         // save data in database
-        apiUrl.post('/api/addBook', newBook)
+        apiUrl.post('/api/addBook', newBook, { withCredentials: true })
             .then(res => {
                 console.log(res.data)
                 if (res.data.insertedId) {

@@ -15,7 +15,11 @@ const AllBook = ({ allBook }) => {
                 <div className="relative p-6 px-6 py-14 md:px-12">
                     <h2 className="mb-4 block text-3xl font-bold leading-[1.5] tracking-normal text-gray-100 dark:text-white antialiased">
                         {book_name}
+
                     </h2>
+
+
+
                     <h5 className="block mb-4 font-sans text-xl antialiased font-medium leading-snug tracking-normal text-gray-300 dark:text-white">
                         Author: {author_name}
                     </h5>

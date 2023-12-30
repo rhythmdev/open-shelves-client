@@ -11,7 +11,7 @@ const BorrowedBooks = () => {
 
 
     useEffect(() => {
-        apiUrl.get(`/api/borrowedBook/${user?.email}`)
+        apiUrl.get(`/api/borrowedBook/${user?.email}`, {withCredentials: true})
             .then(res => {
                 // console.log(res.data);
                 setBorrowedBooks(res.data);
