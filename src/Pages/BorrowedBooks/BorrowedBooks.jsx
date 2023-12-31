@@ -3,22 +3,24 @@ import useApiUrl from "../../hooks/useApiUrl";
 import useAuth from "../../hooks/useAuth";
 import { FaHandHolding, FaHandHoldingHand } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const BorrowedBooks = () => {
     const { user } = useAuth();
     const apiUrl = useApiUrl();
     const [borrowedBooks, setBorrowedBooks] = useState([]);
+    const axiosSecure = useAxiosSecure();
 
 
     useEffect(() => {
-        apiUrl.get(`/api/borrowedBook/${user?.email}`, {withCredentials: true})
+        axiosSecure.get(`/api/borrowedBook/${user?.email}`)
             .then(res => {
                 // console.log(res.data);
                 setBorrowedBooks(res.data);
             })
             .catch(err => console.log(err))
     }
-        , [apiUrl, user?.email])
+        , [axiosSecure, user?.email])
     // console.log(borrowedBooks);
 
     const handelReturnBook = (_id, bookId) => {
@@ -80,7 +82,7 @@ const BorrowedBooks = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
 
                             {
-                                borrowedBooks?.map(book => <div key={book?._id} className="block rounded-lg p-4 shadow-md shadow-indigo-100 ">
+                                borrowedBooks?.map(book => <div key={book?._id} className="block rounded-lg p-4 shadow-md shadow-indigo-200 ">
                                     <img
                                         alt="book_cover"
                                         src={book?.image}

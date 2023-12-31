@@ -1,10 +1,10 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
-import useApiUrl from "../../hooks/useApiUrl";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const UpdateBook = () => {
     const books = useLoaderData();
-    const apiUrl = useApiUrl();
+    const axiosSecure = useAxiosSecure();
     const { _id, book_image, book_name, category, author_name, rating } = books || {};
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ const UpdateBook = () => {
             category
         }
         console.log(updateBook);
-        apiUrl.put(`/api/updateBook/${_id}`, updateBook, {withCredentials: true})
+        axiosSecure.put(`/api/updateBook/${_id}`, updateBook)
             .then(res => {
                 console.log('updated', res.data);
                 if (res.data.modifiedCount > 0) {

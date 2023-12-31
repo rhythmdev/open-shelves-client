@@ -1,9 +1,9 @@
 import Swal from "sweetalert2";
-import useApiUrl from "../../hooks/useApiUrl";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const AddBook = () => {
 
-    const apiUrl = useApiUrl();
+    const axiosSecure = useAxiosSecure();
 
 
 
@@ -32,7 +32,7 @@ const AddBook = () => {
 
 
         // save data in database
-        apiUrl.post('/api/addBook', newBook, { withCredentials: true })
+        axiosSecure.post('/api/addBook', newBook)
             .then(res => {
                 console.log(res.data)
                 if (res.data.insertedId) {
@@ -51,14 +51,14 @@ const AddBook = () => {
                         icon: "success",
                         title: "Book Added Successfully"
                     });
-                  
+
                 }
-               
+
             })
             .catch(error => {
                 console.log(error)
             })
-            e.currentTarget.reset();
+        e.currentTarget.reset();
     }
 
     return (
