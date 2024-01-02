@@ -44,22 +44,22 @@ const router = createBrowserRouter([
             {
                 path: '/books/:category',
                 element: <PrivateRoute><Books /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:8080/api/books/${params.category}`)
+                loader: ({ params }) => fetch(`https://open-shelves-server.vercel.app/api/books/${params.category}`)
             },
             {
                 path: '/bookDetails/:id',
                 element: <PrivateRoute> <BookDetails /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+                loader: ({ params }) => fetch(`https://open-shelves-server.vercel.app/api/singleBook/${params.id}`)
             },
             {
                 path: '/readBook/:id',
                 element: <PrivateRoute><ReadBook /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+                loader: ({ params }) => fetch(`https://open-shelves-server.vercel.app/api/singleBook/${params.id}`)
             },
             {
                 path: 'updateBook/:id',
                 element: <PrivateRoute><UpdateBook /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:8080/api/singleBook/${params.id}`)
+                loader: ({ params }) => fetch(`https://open-shelves-server.vercel.app/api/singleBook/${params.id}`)
             },
             {
                 path: '/login',

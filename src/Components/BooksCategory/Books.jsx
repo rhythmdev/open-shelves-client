@@ -8,9 +8,9 @@ import Lottie from "lottie-react";
 const Books = () => {
 
     const books = useLoaderData();
-    console.log(books);
+    // console.log(books);
     const { category } = useParams();
-    console.log(category);
+    // console.log(category);
 
     const { loading } = useAuth();
 

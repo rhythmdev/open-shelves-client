@@ -3,24 +3,22 @@ import useApiUrl from "../../hooks/useApiUrl";
 import useAuth from "../../hooks/useAuth";
 import { FaHandHolding, FaHandHoldingHand } from "react-icons/fa6";
 import Swal from "sweetalert2";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const BorrowedBooks = () => {
     const { user } = useAuth();
     const apiUrl = useApiUrl();
     const [borrowedBooks, setBorrowedBooks] = useState([]);
-    const axiosSecure = useAxiosSecure();
 
 
     useEffect(() => {
-        axiosSecure.get(`/api/borrowedBook/${user?.email}`)
+        apiUrl.get(`/api/borrowedBook/${user?.email}`, { withCredentials: true })
             .then(res => {
                 // console.log(res.data);
                 setBorrowedBooks(res.data);
             })
             .catch(err => console.log(err))
     }
-        , [axiosSecure, user?.email])
+        , [apiUrl, user?.email])
     // console.log(borrowedBooks);
 
     const handelReturnBook = (_id, bookId) => {
