@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import avatar from './avatar.jpg'
+import DarkMode from "../DarkMode/DarkMode";
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -38,13 +39,13 @@ const Header = () => {
                 <Link to={'/'}>
                     <Navbar.Brand  >
                         <img src={logo} className="mr-2 h-6 sm:h-9" alt="Logo" />
-                        <span className=" font-lobster self-center whitespace-nowrap text-3xl font-bold dark:text-white bg-gradient-to-r from-gra-start via-gra-middle  to-gra-end bg-clip-text text-transparent">Open Shelves</span>
+                        <span className=" font-lobster self-center whitespace-nowrap text-3xl font-bold dark:text-white bg-gradient-to-r from-gra-start to-gra-end bg-clip-text text-transparent">Open Shelves</span>
                     </Navbar.Brand>
                 </Link>
 
                 <div className="flex md:order-2 ">
 
-
+                    <DarkMode />
                     <Dropdown
                         arrowIcon={false}
                         inline
@@ -86,7 +87,7 @@ const Header = () => {
                     <NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start via-gra-middle to-gra-end  bg-clip-text text-transparent underline font-bold" : ""
+                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start  to-gra-end  bg-clip-text text-transparent underline font-bold dark:text-gray-200" : ""
                         }
                     >
                         Home
@@ -94,7 +95,7 @@ const Header = () => {
                     <NavLink
                         to="/addBook"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start via-gra-middle to-gra-end  bg-clip-text text-transparent underline font-bold" : ""
+                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start  to-gra-end  bg-clip-text text-transparent underline font-bold dark:text-gray-200" : ""
                         }
                     >
                         Add Book
@@ -102,7 +103,7 @@ const Header = () => {
                     <NavLink
                         to="/allBooks"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start via-gra-middle to-gra-end  bg-clip-text text-transparent underline font-bold" : ""
+                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start  to-gra-end  bg-clip-text text-transparent underline font-bold dark:text-gray-200" : ""
                         }
                     >
                         All Books
@@ -110,7 +111,7 @@ const Header = () => {
                     <NavLink
                         to="/borrowedBooks"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start via-gra-middle to-gra-end  bg-clip-text text-transparent underline font-bold" : ""
+                            isPending ? "pending" : isActive ? "bg-gradient-to-r from-gra-start  to-gra-end  bg-clip-text text-transparent underline font-bold dark:text-gray-100" : ""
                         }
                     >
                         Borrowed Books

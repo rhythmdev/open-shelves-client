@@ -66,7 +66,7 @@ const Banner = () => {
 
                             <>
                                 {
-                                    books?.map(book => <SwiperSlide key={book?._id}><img className="w-[240px] h-[360px]" src={book?.book_image} /></SwiperSlide>)
+                                    books.slice(0, 12)?.map(book => <SwiperSlide key={book?._id}><img className="w-[240px] h-[360px]" src={book?.book_image} /></SwiperSlide>)
                                 }
                             </>
                         </Swiper>

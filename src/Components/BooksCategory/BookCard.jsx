@@ -9,7 +9,7 @@ const BookCard = ({ book }) => {
 
     return (
         <div className='mt-6'>
-            <div className="flex max-w-lg lg:h-52 md:h-52 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+            <div className="flex max-w-lg lg:h-52 md:h-52 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-700">
                 <div className="w-1/3 bg-cover" style={{ backgroundImage: `url(${book_image})` }}></div>
 
                 <div className="w-2/3 p-4 md:p-4">

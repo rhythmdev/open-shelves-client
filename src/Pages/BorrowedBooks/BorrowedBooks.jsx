@@ -96,7 +96,7 @@ const BorrowedBooks = () => {
 
                                             <div>
 
-                                                <dd className="font-medium">{book?.bookName}</dd>
+                                                <dd className="font-medium dark:text-gray-500">{book?.bookName}</dd>
                                             </div>
                                         </dl>
 
@@ -106,7 +106,7 @@ const BorrowedBooks = () => {
                                                 <div className="mt-1.5 sm:mt-0">
                                                     <p className="text-gray-500">Borrowed Date</p>
 
-                                                    <p className="font-medium">{book?.borrowedDate}</p>
+                                                    <p className="font-medium dark:text-gray-500">{book?.borrowedDate}</p>
                                                 </div>
                                             </div>
 
@@ -116,7 +116,7 @@ const BorrowedBooks = () => {
                                                 <div className="mt-1.5 sm:mt-0">
                                                     <p className="text-gray-500">Return Date</p>
 
-                                                    <p className="font-medium">{book?.returnDate}</p>
+                                                    <p className="font-medium dark:text-gray-500">{book?.returnDate}</p>
                                                 </div>
                                             </div>
 
