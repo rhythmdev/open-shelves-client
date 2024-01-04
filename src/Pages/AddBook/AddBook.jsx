@@ -1,10 +1,11 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import { useNavigate } from "react-router-dom";
 
 const AddBook = () => {
 
     const axiosSecure = useAxiosSecure();
-
+    const navigate = useNavigate();
 
 
     const handelAddBook = e => {
@@ -51,7 +52,7 @@ const AddBook = () => {
                         icon: "success",
                         title: "Book Added Successfully"
                     });
-
+                   navigate('/allBooks')
                 }
 
             })

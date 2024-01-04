@@ -94,7 +94,7 @@ const BookDetails = () => {
 
     return (
         <div className="flex items-center justify-center py-8">
-            <div className="flex flex-col  max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex flex-col  max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-100">
                 <div className="flex space-x-4">
 
                     <div className="flex flex-col space-y-1">
@@ -113,7 +113,7 @@ const BookDetails = () => {
                 </div>
                 <div className="flex flex-wrap justify-between">
 
-                    <button disabled = {book_quantity === 0} onClick={() => setOpenModal(true)} className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3 ">
+                    <button disabled={book_quantity === 0} onClick={() => setOpenModal(true)} className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3 ">
                         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                             Borrow
                         </span>
@@ -138,7 +138,7 @@ const BookDetails = () => {
                             <Modal.Body>
                                 <div className="space-y-6">
                                     <form onSubmit={handelModalSubmit}>
-                                        <label>Return Date</label>
+                                        <label className="text-gray-800 font-medium dark:text-gray-500">Return Date</label>
                                         <TextInput name="date" type="date" placeholder="Please pick a date" required />
                                         <button type="submit" className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-800 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 mt-3">
                                             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
