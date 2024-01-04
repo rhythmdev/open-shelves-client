@@ -7,8 +7,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-     'lobster': "'Lobster Two', sans-serif",
-     'poppins': "'Poppins', sans-serif"
+      'lobster': "'Lobster Two', sans-serif",
+      'poppins': "'Poppins', sans-serif"
     },
     colors: {
       "gra-start": '#FEBF10',
@@ -19,7 +19,7 @@ export default {
   },
   plugins: [
     require('flowbite/plugin')
-],
-darkMode: "class"
+  ],
+  darkMode: "class"
 }
 
