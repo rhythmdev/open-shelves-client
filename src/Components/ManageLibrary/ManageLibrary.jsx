@@ -26,6 +26,7 @@ const ManageLibrary = () => {
                                         shadowScale: 0.94,
                                     }}
 
+                                    pagination={true}
                                     modules={[EffectCube, Pagination]}
                                     className="mySwiper"
                                     style={{ width: '380px', height: '360px' }}
@@ -49,7 +50,7 @@ const ManageLibrary = () => {
                         <div className="lg:py-24">
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-lobster  text-gray-700 dark:text-gray-200 underline">Manage Your Library with Ease</h2>
 
-                            <p className="mt-5 text-base md:text-lg lg:text-lg font-medium text-gray-700 dark:text-gray-200 ">
+                            <p className="mt-5 text-base md:text-lg lg:text-lg font-medium text-gray-600 dark:text-gray-200 ">
                                 Open Shelves is a comprehensive library management system that allows users to register, borrow, and return books hassle-free. With our user-friendly interface, you can easily keep track of your library inventory and provide a seamless borrowing experience for your patrons.
                             </p>
 

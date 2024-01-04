@@ -3,6 +3,7 @@ import Banner from "../../Components/Banner/Banner";
 import BooksCategory from "../../Components/BooksCategory/BooksCategory";
 import Discover from "../../Components/Discover/Discover";
 import ManageLibrary from "../../Components/ManageLibrary/ManageLibrary";
+import NewsLetter from "../../Components/NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
@@ -22,6 +23,10 @@ const Home = () => {
       {/* discover area */}
       <Discover />
       {/* end of discover area */}
+
+      {/* newsletter area */}
+      <NewsLetter/>
+      {/* end of newsletter area */}
     </div>
   );
 };

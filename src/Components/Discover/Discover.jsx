@@ -6,7 +6,7 @@ const Discover = () => {
     return (
         <div className="py-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-lobster text-center text-gray-700 dark:text-gray-200 underline ">Discover Your Next Read: Explore a World of Knowledge at Your Fingertips</h2>
-            <h5 className="text-lg md:text-xl lg:text-xl  font-medium text-gray-700 dark:text-gray-200 text-center py-8">Our library management system simplifies access, streamlines borrowing,<br /> and connects you with the resources you need.</h5>
+            <h5 className="text-lg md:text-xl lg:text-xl  font-medium text-gray-600 dark:text-gray-200 text-center py-8">Our library management system simplifies access, streamlines borrowing,<br /> and connects you with the resources you need.</h5>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5 items-center py-10">
                 <div className="text-center space-y-4 bg-gray-50 px-8 py-6 rounded-md cursor-pointer shadow-md shadow-gra-end hover:border-2 border-orange-400 w-full h-[330px]">
                  
