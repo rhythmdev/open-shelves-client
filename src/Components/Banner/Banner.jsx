@@ -33,7 +33,7 @@ const Banner = () => {
     return (
         <div className="py-5">
             <section className="bg-white dark:bg-gray-900">
-                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div className="grid max-w-screen-xl items-center  px-4 py-8 mx-auto lg:gap-14 xl:gap-28 lg:py-16 lg:grid-cols-12">
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h2 className="max-w-2xl mb-4  text-4xl text-balance font-bold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white  bg-gradient-to-r from-gra-start to-gra-end text-transparent bg-clip-text py-2">
                             <Typewriter words={['Borrow, lend, discover. A community library for everyone', ' Millions of stories, endless possibilities. Start your adventure today', 'More than just books. A space to connect, learn, and grow']}
