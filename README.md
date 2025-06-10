@@ -1,5 +1,5 @@
 # Open Shelves
-Borrow, lend, discover. A community library for everyone.
+Borrow, lend, discover: Your community library for all.
 
 ## Website Link: [Open Shelves] (https://open-shelves-44471.web.app)
 ## Server Link: [Open Shelves] (https://github.com/rhythmdev/open-shelves-server)
