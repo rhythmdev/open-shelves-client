@@ -5,7 +5,7 @@ import { FaHandHolding, FaHandHoldingHand } from "react-icons/fa6";
 import Swal from "sweetalert2";
 
 const BorrowedBooks = () => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const apiUrl = useApiUrl();
     const [borrowedBooks, setBorrowedBooks] = useState([]);
 
@@ -63,8 +63,14 @@ const BorrowedBooks = () => {
             }
         });
     }
-
-
+    
+{loading && (
+            <div className='flex items-center justify-center min-h-screen'>
+                <div>
+                    <Lottie animationData={loader} loop={true} className="size-[50%] lg:size-[15%] md:size-[20%] mx-auto" />
+                </div>
+            </div>
+        )}
 
 
     return (
