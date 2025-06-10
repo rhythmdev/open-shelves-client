@@ -6,14 +6,17 @@ Borrow, lend, discover. A community library for everyone.
 
 ###Features
 ***Add Book***
-- Registered users can add books from different 4 types of categories. 
+Registered users can add books from four different categories. 
 ***Borrow Book***
-- Any registered user can borrow a book from 4 categories. If books from a specific category are available then  the user can  borrow the book. If the book was not available then the user can't borrow the book.
+- Here are a few ways to rewrite your text, with grammatical corrections and improved clarity:
+
+Option 1 (Concise)
+Registered users can borrow books from four categories. If a book from a specific category is available, the user can borrow it; otherwise, they cannot.
 ***Return Book***
-- Registered users can return the book
+- Books can be returned by registered users.
 ***Update Book***
-- Registered users can update any book.
-***Authentication with firebase***
-- For user register and login-related tasks Firebase is being used firebase. google login is also available.
+- Registered users have the ability to update any book.
+***Authentication with Firebase ***
+- User registration and login functionalities are handled by Firebase, which also offers Google login as an option.
 ***Jwt***
-- For security, the API Jwt is used with cookies.
+- API security is implemented using JWTs in conjunction with cookies.
