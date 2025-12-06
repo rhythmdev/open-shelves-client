@@ -19,7 +19,7 @@ const Register = () => {
         googleSignIn()
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 Swal.fire(`Welcome ${user?.displayName} to Open Shelves`)
                 // navigate after login
                 navigate(location?.state ? location.state : '/');
@@ -63,7 +63,7 @@ const Register = () => {
             .then((userCredential) => {
                 // Signed up 
                 const user = userCredential.user;
-                console.log(user);
+                // console.log(user);
                 //update user name and photo
                 updateProfile(user, {
                     displayName: name,
